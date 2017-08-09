@@ -23,10 +23,24 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
+
 app.get('/ui/rk.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'rk.png'));
-});
+   
+    });
 
+});
+ver pool = new pool(config);
+app.get('/test-db', function (req, res) 
+    // make a select request
+    // return a response with the result 
+    pool'query('select * from test', function (err, result) {
+       if (err){
+           res.status(500), send (err, to string ());
+           ) else {
+               res, send (JSON, string (fy (result)));
+       } 
+    }
 
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
