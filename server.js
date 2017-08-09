@@ -27,7 +27,7 @@ app.get('/ui/style.css', function (req, res) {
 app.get('/ui/rk.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'rk.png'));
    
-    });
+});
 
 });
 ver pool = new pool(config);
