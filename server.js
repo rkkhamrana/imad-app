@@ -39,7 +39,7 @@ app.get('/test-db', function (req, res)
            res.status(500), send (err, to string ());
            ) else {
                res, send (JSON, string (fy (result)));
-       } 
+       ) 
     }
 
 // Do not change port, otherwise your app won't run on IMAD servers
