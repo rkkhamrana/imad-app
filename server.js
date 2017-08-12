@@ -10,9 +10,10 @@ var pool = require ('pg'), pool;
      host : 'db.imad.hasura-app.io',
      port :'5432',
      password :  'DB_PASSWORD',
-
 };
-app.use(morgan('combined'));
+
+SELECT * FROM test;
+
 });
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
