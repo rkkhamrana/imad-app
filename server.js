@@ -92,7 +92,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-var Pool = new Pool (config);
+var Pool = new Pool (config); // from pit. 12
 app.get('/test-db', function (req, res) {
     // make a select request
     // return a response with the results
