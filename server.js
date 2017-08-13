@@ -92,6 +92,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+var Pool = new Pool (config);
 app.get('/test-db', function (req, res) {
     // make a select request
     // return a response with the results
@@ -105,9 +106,10 @@ app.get('/counter', function (req, res) {
 
 var names =[];
 app.get('/submit-name', function (req, res) {
-// submit the name from  the request
+// submit the name from  the request    from pit. 9
 var name = req.query.name ;
 });   
+
 app.get('/article-one', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
 }); 
