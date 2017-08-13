@@ -101,7 +101,13 @@ var counter - 0;
 app.get('/counter', function (req, res) {
   counter = counter +1  ;
     res.send( counter.toString());
-});    
+});
+
+var names =[];
+app.get('/submit-name', function (req, res) {
+// submit the name from  the request
+var name = req.query.name ;
+});   
 app.get('/article-one', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
 }); 
