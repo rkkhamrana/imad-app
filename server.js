@@ -98,7 +98,8 @@ app.get('/test-db', function (req, res) {
     // return a response with the results
 });
 
-var counter - 0;
+
+var counter = 0;
 app.get('/counter', function (req, res) {
   counter = counter +1  ;
     res.send( counter.toString());
@@ -108,9 +109,17 @@ var names =[];
 app.get('/submit-name', function (req, res) {
 // submit the name from  the request    from pit. 9
 var name = req.query.name ;
-});   
 
-app.get('/article-one', function (req, res) {
+names.push (name);
+//json  javascript object naration
+res.send(JSON.stringify(names));
+});
+
+app.get('/articleName', function (req, res) {
+  // articleName== article-one
+  //articles[articleName] == {} content object for article one
+    var articleName = req.paroms.articleName;
+    
   res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
 }); 
 app.get('/article-two', function (req, res) {
