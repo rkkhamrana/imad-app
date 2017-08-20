@@ -1,125 +1,15 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-var pool = require('pg');
-
-var config = {
-    user: 'rkkhamrana' ,
-    database: 'rkkhamrana' ,
-    host: 'db..imad.hasura-app.io' ,
-    port: '5432' ,
-    password:  'DB_PASSWORD'
-};
 
 var app = express();
 app.use(morgan('combined'));
-
-
-var articles = ( );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function createTemplete (data){   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-var Pool = new Pool (config); // from pit. 12
-app.get('/test-db', function (req, res) {
-    // make a select request
-    // return a response with the results
-});
-
-
-var counter = 0;
-app.get('/counter', function (req, res) {
-  counter = counter +1  ;
-    res.send( counter.toString());
-});
-
-var names =[];
-app.get('/submit-name', function (req, res) {
-// submit the name from  the request    from pit. 9
-var name = req.query.name ;
-
-names.push (name);
-//json  javascript object naration
-res.send(JSON.stringify(names));
-});
-
-app.get('/articleName', function (req, res) {
-  // articleName== article-one
-  //articles[articleName] == {} content object for article one
-    var articleName = req.paroms.articleName;
-    
+app.get('/article-one', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
 }); 
 app.get('/article-two', function (req, res) {
@@ -146,3 +36,5 @@ app.listen(port, function () {
   console.log(`IMAD course app listening on port ${port}!`);
 });
 
+
+var port = 80;
