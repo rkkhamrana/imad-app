@@ -26,7 +26,9 @@ app.get('/ui/style.css', function (req, res) {
 app.get('/ui/rk.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'rk.png'));
 });
-
+INSERT INTO table_test ;( id, name )
+VALUES (1, value); 
+SELECT CustomerName,City FROM Customers;
 
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
