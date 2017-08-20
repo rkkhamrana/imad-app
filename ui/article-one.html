@@ -16,16 +16,14 @@
 <script>
 function validateForm() {
     var x = document.forms["myForm"]["fname"].value;
-    INSERT INTO table_test
-    VALUES (1,); 
-
+   
     if (x == "") {
         alert("Name must be filled out");
         return false;
     }
 }
 </script>
-
+SELECT * FROM Customers;
 <form name="myForm" action="/action_page_post.php"
 onsubmit="return validateForm()" method="post">
 Name: <input type="text" name="fname">
